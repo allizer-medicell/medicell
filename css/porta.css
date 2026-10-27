@@ -1,0 +1,313 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background: #061321;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    position: relative;
+    overflow-x: hidden;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #061321;
+    color: white;
+}
+
+#videoFondo {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.fondo-oscuro {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 10, 25, 0.60);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.portada {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 140px;
+    margin-bottom: 35px;
+    animation: desaparecer 3s ease-in-out forwards;
+}
+
+@keyframes desaparecer {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-80px);
+        visibility: hidden;
+    }
+}
+
+.logo {
+    display: block;
+    width: 250px;
+    max-width: 40vw;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+    animation: latir 2.2s infinite ease-in-out;
+    flex-shrink: 0;
+}
+
+@keyframes latir {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+.encabezado h1 {
+    margin: 0;
+    width: 100%;
+    max-width: 950px;
+    font-size: clamp(30px, 5vw, 60px);
+    line-height: 1.15;
+    text-align: center;
+    text-shadow: 2px 3px 8px #000;
+}
+
+.continuar {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 25px auto;
+    bottom: 140px;
+}
+
+.continuar a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    background: #e0823f;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    border: 2px solid #fbd0a2;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.continuar a:hover {
+    background: #f39854;
+    transform: scale(1.05);
+}
+
+.pie {
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    right: 10px;
+    bottom: 500px;
+    text-align: center;
+    color: #eee;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .portada {
+        padding: 35px 30px 75px;
+    }
+
+    .logo {
+        width: 125px;
+    }
+
+    .encabezado h1 {
+        font-size: clamp(38px, 6vw, 55px);
+    }
+
+    .descripcion {
+        max-width: 520px;
+        font-size: 16px;
+    }
+
+    .continuar {
+        font-size: 20px;
+        padding: 15px 35px;
+    }
+
+    .sonido-btn {
+        right: 20px;
+        bottom: 20px;
+        padding: 11px 17px;
+        font-size: 15px;
+    }
+
+    .icono-sonido {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .portada {
+        width: 100%;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 0 15px;
+        justify-content: flex-start;
+    }
+
+    .encabezado {
+        margin-top: 40px;
+        margin-bottom: 0;
+        gap: 8px;
+        animation: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .logo {
+        width: 90px;
+        max-width: 35vw;
+    }
+
+    .encabezado h1 {
+        font-size: clamp(27px, 7.5vw, 40px);
+        line-height: 1.15;
+    }
+
+    .bienvenida {
+        font-size: 18px;
+    }
+
+    .descripcion {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .continuar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100px;
+        width: 100%;
+        max-width: none;
+        min-height: auto;
+        margin: 0 auto;
+        padding: 0 15px;
+        font-size: 18px;
+    }
+
+    .continuar a {
+        width: 100%;
+        max-width: 280px;
+        min-height: 55px;
+        padding: 14px 20px;
+        font-size: 19px;
+    }
+
+    .pie {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 45px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .sonido-btn {
+        right: 12px;
+        bottom: 15px;
+        padding: 9px 13px;
+        gap: 7px;
+        font-size: 13px;
+    }
+
+    .icono-sonido {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+.sonido-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 10px;
+    background: #f39854;
+    color: white;
+    border: 2px solid rgb(255, 221, 182);
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+.icono-sonido {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.sonido-btn:hover {
+    background: #f39854;
+    transform: scale(1.05);
+}

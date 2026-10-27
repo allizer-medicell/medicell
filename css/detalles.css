@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height:  100vh;
+    background-color: #000;
+    width:  100%;
+    background-color: transparent;
+    overflow-x: hidden;
+    color: #ffffff;
+}
+
+.opciones-usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.opciones-usuario a {
+    display: inline-block;
+    background: #e0823f;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    width: 300px;
+    padding: 15px 5px;
+}
+
+.opciones-usuario a:hover {
+    background: #e49677;
+}
+
+@media (max-width: 600px) {
+    .opciones-usuario {
+        flex-direction: column;
+    }
+
+    .opciones-usuario a {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+p {
+    width:  100%;
+    max-width:  100%;
+    padding:  0 15px;
+    box-sizing: border-box;
+}
+
+.logo{
+    display: grid;
+    text-align: center;
+    margin-left:  15%;
+    margin-top:  30px;
+    margin-bottom:  55px;
+    grid-template-columns:  170px 800px 100px;
+    grid-template-rows:  170px;
+    grid-template-areas: 'img';
+}
+
+.img{
+    margin-left:  200px;
+    margin-bottom:  200px;
+    width:  150px;
+    height:  200px;
+    border-radius:  20px;
+}
+
+.tama{
+    width:  220px;
+    height:  240px;
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:  110px;
+    color: #ffffff;
+}
+
+.btn {
+    text-align: center;
+    background-color: #e0823f;
+    color: rgb(249, 244, 244);
+    text-decoration: none;
+    border-radius:  30px;
+    font-size:  26px;
+    margin-left:  200px;
+    margin-right:  10px;
+    margin-top:  50px;
+    font-family: Cooper;
+    padding:  22px 200px;
+    display: inline-block;
+}
+
+.btm {
+    text-align: center;
+    background-color: #e0823f;
+    color: rgb(246, 241, 241);
+    text-decoration: none;
+    border-radius:  30px;
+    font-size:  26px;
+    margin-left:  130px;
+    margin-right:  150px;
+    margin-top:  50px;
+    font-family: Cooper;
+    padding:  22px 30px;
+    display: inline-block;
+}
+
+.table{
+    color: #ffffff;
+}
+
+.cuadros {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+h3{
+    font-size:  30px;
+}
+
+.cuadro {
+    font-size:  25px;
+    color: #ffffff;
+    border-radius:  10px;
+}
+
+#videoFondo {
+    position: fixed;
+    inset:  0;
+    width:  100%;
+    height:  100vh;
+    height:  100dvh;
+    object-fit: cover;
+    object-position: center;
+    z-index:  -1;
+    pointer-events: none;
+}
+
+@media (max-width:  600px) {
+    .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:  15px;
+        text-align: center;
+        margin:  30px auto 55px;
+        padding:  20px;
+    }
+
+    .img {
+        margin:  0 auto;
+        width:  120px;
+        height: auto;
+    }
+
+    .tama {
+        width:  150px;
+        height:  150px;
+        object-fit: contain;
+        margin:  0 auto;
+    }
+
+    .logo h1 {
+        font-size:  45px;
+        text-align: center;
+        line-height:  1.2;
+        margin:  0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap:  15px;
+        align-items: center;
+        padding:  0 15px;
+    }
+
+    .btn, .btm {
+        margin-left:  0;
+        margin-right:  0;
+        margin-top:  10px;
+        padding:  15px 25px;
+        font-size:  20px;
+        width:  90%;
+        max-width:  300px;
+        text-align: center;
+    }
+
+    .cuadros {
+        padding:  0 15px;
+    }
+
+    .cuadro {
+        padding:  20px;
+        font-size:  18px;
+    }
+
+    .cuadro h3 {
+        font-size:  22px;
+    }
+
+    a[href*='wa.me'] {
+        width: 70px !important;
+        height: 70px !important;
+        right: 20px !important;
+        bottom: 20px !important;
+    }
+
+    a[href*='wa.me'] img {
+       width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+@media (min-width:  601px) and (max-width:  1024px) {
+    .logo {
+        margin-left:  0;
+        grid-template-columns:  1fr;
+        justify-items: center;
+    }
+
+    .img {
+        margin-left:  0;
+        margin-bottom:  10px;
+    }
+
+    h1 {
+        font-size:  70px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap:   20px;
+        align-items: center;
+    }
+
+    .btn, .btm {
+        margin-left:  0;
+        margin-right:  0;
+        padding:  18px 40px;
+        font-size:  22px;
+        width:  80%;
+        max-width:  400px;
+    }
+
+    .cuadro {
+        margin:  0 20px;
+        font-size:  20px;
+    }
+}

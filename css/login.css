@@ -1,0 +1,149 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 20px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ffb18e, #f5a17f);
+    color: #222;
+}
+
+.login-contenedor {
+    width: 100%;
+    max-width: 500px;
+    padding: 32px 25px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.login-contenedor h2 {
+    margin: 8px 0 25px;
+    text-align: center;
+    color: #efad93;
+    font-size: clamp(24px, 5vw, 30px);
+}
+
+.login-contenedor p {
+    line-height: 1.5;
+}
+
+.login-contenedor label {
+    display: block;
+    margin: 20px 0 8px;
+    font-size: 16px;
+}
+
+.login-contenedor input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #f2f5fa;
+}
+
+.login-contenedor input:focus {
+    outline: 2px solid #efad93;
+    border-color: transparent;
+}
+
+.login-contenedor button {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #efad93;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-contenedor button:hover {
+    background: #e49677;
+}
+
+.error,
+.exito {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.error {
+    background: #ffe5e5;
+    color: #a52222;
+}
+
+.exito {
+    background: #e4f8ed;
+    color: #087443;
+}
+
+.login-enlaces {
+    margin-top: 26px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.login-enlaces a,
+.exito a {
+    color: #d9896a;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 14px 10px;
+    }
+
+    .login-contenedor {
+        padding: 25px 18px;
+        border-radius: 16px;
+    }
+
+    .login-contenedor label {
+        font-size: 15px;
+    }
+
+    .login-contenedor input,
+    .login-contenedor button {
+        font-size: 16px;
+    }
+}
+.login-contenedor {
+    position: relative;
+    z-index: 2;
+}
+
+.login-contenedor form {
+    position: relative;
+    z-index: 3;
+}
+
+.login-contenedor button[type="submit"] {
+    position: relative;
+    z-index: 4;
+    pointer-events: auto;
+    touch-action: manipulation;
+    cursor: pointer;
+}
